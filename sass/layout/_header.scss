@@ -1,0 +1,32 @@
+.header {
+    width: 100%;
+    padding: $padding-small;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 6;
+
+    & .wrapper {
+        width: 130rem;
+    }
+
+    &__logo {
+        color: $color-dark;
+    }
+
+    &__menu {
+        width: 5.5rem;
+        height: 5rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-direction: column;
+        cursor: pointer;
+
+        &__line {
+            height: .5rem;
+            width: 100%;
+            background-color: $color-dark;
+        }
+    }
+}

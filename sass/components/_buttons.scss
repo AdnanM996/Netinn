@@ -1,0 +1,46 @@
+.cta {
+    display: inline-block;
+    padding: 2.5rem 5rem;
+    color: $color-dark;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+    transition: $transition;
+    z-index: 2;
+    letter-spacing: .1rem;
+
+    &::before {
+        background-color: rgba($color-grey-dark, .5);
+        bottom: 0%;
+        left: 0%;
+        height: 0%;
+        width: 100%;
+        transition: all .33s ease-in-out;
+        z-index: -1; 
+    }
+
+    &:hover::before {
+        height: 100%;
+    }
+
+    &::after {
+        background-color: $color-orange;
+        bottom: 0%;
+        left: 0%;
+        height: 5%;
+        width: 100%;
+        transition: all .5s ease-in-out;
+        transition-delay: .25;
+        z-index: -1;
+    }
+
+    &:hover::after {
+        height: 100%;
+    }
+
+    &:hover {
+        color: $color-white;
+    }
+
+}

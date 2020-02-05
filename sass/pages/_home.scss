@@ -1,0 +1,215 @@
+.banner {
+    height: 100%;
+    width: 100%;
+    background-color: $color-grey;
+    position: relative;
+
+    &--home {
+        padding-top: 20rem;
+    }
+
+    & .wrapper {
+        height: 100%;
+    }
+
+    &__heading--small {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+
+        &::after {
+            bottom: 0%;
+            left: 0%;
+            height: 90%;
+            width: .3rem;
+            background-color: $color-orange;
+        }
+    }
+
+    &__video__container {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        bottom: 0%;
+        left: 0%;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+
+        &::after {
+            top: 0%;
+            right: 0%;
+            bottom: 0%;
+            left: 0%;
+            background-color: rgba($color-dark, .8);
+            z-index: 1;
+        }
+    }
+
+    &__video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-height: 100%;
+        min-width: 100%;
+    }
+}
+
+.what-we-do {
+    padding: $padding-medium;
+}
+
+.featured-work {
+    padding: $padding-medium;
+
+    & .wrapper {
+        flex-direction: column;
+        width: 120rem;
+    }
+}
+
+.our-netinn {
+    padding: $padding-medium;
+    background-color: $color-orange;
+}
+
+.meet-us {
+    padding: $padding-medium;
+    background-color: $color-grey;
+    position: relative;
+
+    & .wrapper {
+        justify-content: center;
+        align-items: center;
+    }
+
+    &::after {
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 5rem;
+        width: .3rem;
+        background-color: $color-orange;
+    }
+}
+
+.sponsors {
+    background-color: $color-grey;
+    padding: $padding-medium;
+
+    & .wrapper {
+        justify-content: space-evenly;
+    }
+
+    &__item {
+        font-size: 5.2rem;
+        font-weight: 700;
+        color: $color-grey-dark;
+        position: relative;
+        overflow: hidden;
+        line-height: 2;
+
+        &::after,
+        &::before {
+            bottom: 0%;
+            height: .5rem;
+            width: 0%;
+            background-color: $color-orange;
+            transition: $transition;
+        }
+
+        &::after {
+            left: 50%;
+        }
+
+        &::before {
+            right: 50%;
+        }
+
+        &:hover::after,
+        &:hover::before {
+            width: 50%;
+        }
+
+        &--active {
+            color: $color-dark;
+            position: relative;
+            overflow: hidden;
+
+            &::after,
+            &::before {
+                bottom: 0%;
+                left: 0%;
+                height: .5rem;
+                width: 100%;
+                background-color: $color-orange;
+            }
+
+            &:hover::after,
+            &:hover::before {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.quotes-text {
+    padding: $padding-extra-large;
+
+    & .wrapper {
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__paragraph {
+        color: $color-dark;
+        font-size: 3rem;
+        line-height: 2;
+        position: relative;
+        text-align: center;
+
+        &::after {
+            content: '"';
+            top: 25%;
+            left: 25%;
+            transform: translate(-25%, -25%);
+            font-size: 15rem;
+            color: $color-grey-dark;
+            z-index: -1;
+        }
+
+        &::before {
+            content: '"';
+            bottom: 25%;
+            right: 25%;
+            transform: translate(-25%, -25%);
+            font-size: 15rem;
+            color: $color-grey-dark;
+            z-index: -1;
+        }
+    }
+}
+
+.start-project {
+    background-color: $color-grey;
+    padding: $padding-medium;
+
+    & .wrapper {
+        width: 80%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    & h2 {
+        display: inline-block;
+    }
+
+    & .arrow {
+        height: .3rem;
+        width: 70%;
+        display: inline-block;
+        background-color: $color-orange;
+    }
+}

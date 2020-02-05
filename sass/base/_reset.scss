@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: $color-white;
+    color: $color-text;
+}
+
+.wrapper {
+    width: 120rem;
+    margin: 0rem auto;
+    @include lg;
+}
+
+a {
+    text-decoration: none;
+}
+
+.text__box {
+    width: 50%;
+
+    &__link {
+        color: $color-orange;
+        transition: $transition;
+
+        &:hover {
+            color: $color-dark;
+        } 
+    }
+}
+
+ul {
+    list-style: none;
+}
