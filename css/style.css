@@ -18,6 +18,12 @@ body {
   background-color: #fff;
   color: #7e7f80; }
 
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  vertical-align: bottom; }
+
 .wrapper {
   width: 120rem;
   margin: 0rem auto;
@@ -178,6 +184,61 @@ h1, h2, h3, h4, h5, h6 {
       .footer__social__link:hover {
         color: #232428; }
 
+.featured-work .row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+  .featured-work .row:not(:last-child) {
+    margin-bottom: 5rem; }
+
+.featured-work .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  width: 100%;
+  transition: all 0.25s ease-in-out;
+  margin: 7.5rem 0rem; }
+  .featured-work .grid__item {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s ease-in-out; }
+    .featured-work .grid__item::after {
+      top: 0%;
+      left: 0%;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(35, 36, 40, 0.5);
+      opacity: 0;
+      transition: all 0.25s ease-in-out; }
+    .featured-work .grid__item img {
+      transition: all 0.25s ease-in-out;
+      position: relative; }
+    .featured-work .grid__item:hover img {
+      transform: scale(1.02); }
+    .featured-work .grid__item:hover::after {
+      opacity: 1; }
+    .featured-work .grid__item--heading {
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%); }
+    .featured-work .grid__item__btn {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 3rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      z-index: 2;
+      transition: all 0.25s ease-in-out;
+      opacity: 0; }
+    .featured-work .grid__item:hover .grid__item__btn {
+      top: 50%;
+      opacity: 1; }
+
 .header {
   width: 100%;
   padding: 5rem 0rem;
@@ -247,6 +308,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .what-we-do {
   padding: 10rem 0rem; }
+
+.featured-work {
+  padding: 10rem 0rem; }
+  .featured-work .wrapper {
+    flex-direction: column; }
 
 .our-netinn {
   padding: 10rem 0rem;
