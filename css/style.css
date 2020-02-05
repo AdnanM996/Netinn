@@ -248,12 +248,6 @@ h1, h2, h3, h4, h5, h6 {
 .what-we-do {
   padding: 10rem 0rem; }
 
-.featured-work {
-  padding: 10rem 0rem; }
-  .featured-work .wrapper {
-    flex-direction: column;
-    width: 120rem; }
-
 .our-netinn {
   padding: 10rem 0rem;
   background-color: #c38d73; }

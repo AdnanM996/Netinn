@@ -60,15 +60,6 @@
     padding: $padding-medium;
 }
 
-.featured-work {
-    padding: $padding-medium;
-
-    & .wrapper {
-        flex-direction: column;
-        width: 120rem;
-    }
-}
-
 .our-netinn {
     padding: $padding-medium;
     background-color: $color-orange;
