@@ -23,60 +23,54 @@
         &__item {
             position: relative;
             overflow: hidden;
-            transition: $transition;
 
-            &::after {
-                top: 0%;
-                left: 0%;
-                height: 100%;
-                width: 100%;
-                background-color: rgba($color-dark, .5);
-                opacity: 0;
-                z-index: 2;
-                transition: $transition;
-            }
-
-            & img {
-                transition: $transition;
+            &__link {
+                display: block;
                 position: relative;
-                z-index: 2;
-            }
 
-            &:hover img {
-                transform: scale(1.02);
-            }
+                &::after {
+                    top: 0%;
+                    left: 0%;
+                    height: 100%;
+                    width: 100%;
+                    background-color: $color-dark;
+                    transition: $transition;
+                    opacity: 0;
+                }
 
-            &:hover::after {
-                opacity: 1;
-            }
+                &:hover::after {
+                    opacity: 0.45;
+                }
+
+                & img {
+                    transition: $transition;
+                }
+            }//link
 
             &--heading {
                 position: absolute;
                 top: 5%;
                 left: 50%;
                 transform: translateX(-50%);
-                z-index: 2;
-            }
+            }// heading
 
             &__btn {
                 position: absolute;
                 top: 55%;
                 left: 50%;
-                transform: translate(-50%, -50%);
-                color: $color-white;
-                font-size: 3rem;
-                font-weight: 400;
-                text-transform: uppercase;
-                z-index: 2;
-                transition: $transition;
+                transform: translateX(-50%);
                 opacity: 0;
+                transition: $transition;
             }
 
             &:hover .grid__item__btn {
                 top: 50%;
                 opacity: 1;
             }
-        }
 
+            &:hover img {
+                transform: scale(1.03);
+            }
+        }//item
     }
 }
