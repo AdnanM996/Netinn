@@ -329,6 +329,10 @@ h1, h2, h3, h4, h5, h6 {
   .featured-work .wrapper {
     flex-direction: column; }
 
+.dark {
+  background-color: #232428;
+  padding: 10rem 0rem; }
+
 .our-netinn {
   padding: 10rem 0rem;
   background-color: #c38d73; }
