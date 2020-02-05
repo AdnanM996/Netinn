@@ -32,14 +32,14 @@
                 width: 100%;
                 background-color: rgba($color-dark, .5);
                 opacity: 0;
-                //z-index: 2;
+                z-index: 2;
                 transition: $transition;
             }
 
             & img {
                 transition: $transition;
                 position: relative;
-                //z-index: 2;
+                z-index: 2;
             }
 
             &:hover img {
@@ -55,7 +55,7 @@
                 top: 5%;
                 left: 50%;
                 transform: translateX(-50%);
-                //z-index: 2;
+                z-index: 2;
             }
 
             &__btn {
