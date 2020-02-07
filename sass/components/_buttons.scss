@@ -43,4 +43,9 @@
         color: $color-white;
     }
 
+    &--empty {
+        @extend .cta;
+        color: $color-orange;
+        margin-top: $margin-medium;
+    }
 }

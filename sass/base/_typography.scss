@@ -21,6 +21,7 @@ h6 {font-size: .7em;}
 h1, h2, h3, h4, h5, h6 {
     color: $color-dark;
     text-transform: uppercase;
+    line-height: 2;
 }
 
 .heading--white {
@@ -61,8 +62,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text__box {
+    overflow: hidden;
     &--white {
         color: $color-white;
+    }
+
+    &:hover > .line__link {
+        opacity: 1;
+    }
+
+    &:hover > .line__link:not(:hover) {
+        opacity: 0.5;
     }
 }
 
@@ -88,4 +98,38 @@ h1, h2, h3, h4, h5, h6 {
 
 .address {
     line-height: 1.5;
+}
+
+.line__link {
+    display: block;
+    color: $color-white;
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 1.5rem 0rem;
+    text-transform: capitalize;
+    position: relative;
+    overflow: hidden;
+    margin: 2rem 0rem;
+    transition: $transition;
+    
+    &::after,
+    &::before {
+        left: 0%;
+        height: 1px;
+        width: 100%;
+        background-color: rgba($color-white, .7);
+    } 
+
+    &::after {
+        top: 0%;
+    }
+
+    &::before {
+        bottom: 0%;
+    }
+}
+
+.white__text {
+    color: rgba($color-white, .8);
+    margin-bottom: $margin-large;
 }

@@ -74,7 +74,8 @@ h6 {
 
 h1, h2, h3, h4, h5, h6 {
   color: #232428;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 2; }
 
 .heading--white {
   color: #fff; }
@@ -101,8 +102,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   line-height: 1.5; }
 
-.text__box--white {
-  color: #fff; }
+.text__box {
+  overflow: hidden; }
+  .text__box--white {
+    color: #fff; }
+  .text__box:hover > .line__link {
+    opacity: 1; }
+  .text__box:hover > .line__link:not(:hover) {
+    opacity: 0.5; }
 
 .grid__item__btn {
   font-size: 3rem;
@@ -124,7 +131,32 @@ h1, h2, h3, h4, h5, h6 {
 .address {
   line-height: 1.5; }
 
-.cta {
+.line__link {
+  display: block;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding: 1.5rem 0rem;
+  text-transform: capitalize;
+  position: relative;
+  overflow: hidden;
+  margin: 2rem 0rem;
+  transition: all 0.25s ease-in-out; }
+  .line__link::after, .line__link::before {
+    left: 0%;
+    height: 1px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7); }
+  .line__link::after {
+    top: 0%; }
+  .line__link::before {
+    bottom: 0%; }
+
+.white__text {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 5rem; }
+
+.cta, .cta--empty {
   display: inline-block;
   padding: 2.5rem 5rem;
   color: #232428;
@@ -135,7 +167,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.25s ease-in-out;
   z-index: 2;
   letter-spacing: .1rem; }
-  .cta::before {
+  .cta::before, .cta--empty::before {
     background-color: rgba(170, 170, 171, 0.5);
     bottom: 0%;
     left: 0%;
@@ -143,9 +175,9 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     transition: all .33s ease-in-out;
     z-index: -1; }
-  .cta:hover::before {
+  .cta:hover::before, .cta--empty:hover::before {
     height: 100%; }
-  .cta::after {
+  .cta::after, .cta--empty::after {
     background-color: #c38d73;
     bottom: 0%;
     left: 0%;
@@ -154,10 +186,13 @@ h1, h2, h3, h4, h5, h6 {
     transition: all .5s ease-in-out;
     transition-delay: .25;
     z-index: -1; }
-  .cta:hover::after {
+  .cta:hover::after, .cta--empty:hover::after {
     height: 100%; }
-  .cta:hover {
+  .cta:hover, .cta--empty:hover {
     color: #fff; }
+  .cta--empty {
+    color: #c38d73;
+    margin-top: 4rem; }
 
 .footer {
   padding: 12rem 0rem; }
