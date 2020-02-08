@@ -4,6 +4,12 @@
     background-color: $color-grey;
     position: relative;
 
+    &--light {
+        @extend .banner;
+        background-color: $color-grey;
+        padding: $padding-extra-large 0rem;
+    }
+
     &--home {
         padding-top: 20rem;
     }
@@ -23,6 +29,11 @@
             height: 90%;
             width: .3rem;
             background-color: $color-orange;
+        }
+
+        &--dark {
+            color: $color-dark;
+            letter-spacing: .5rem;
         }
     }
 

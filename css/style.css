@@ -313,14 +313,21 @@ h1, h2, h3, h4, h5, h6 {
       width: 100%;
       background-color: #232428; }
 
-.banner {
+.large-img {
+  height: 100%;
+  width: 100%; }
+
+.banner, .banner--light {
   height: 100%;
   width: 100%;
   background-color: #f4f4f4;
   position: relative; }
+  .banner--light {
+    background-color: #f4f4f4;
+    padding: 20rem 15rem 0rem; }
   .banner--home {
     padding-top: 20rem; }
-  .banner .wrapper {
+  .banner .wrapper, .banner--light .wrapper {
     height: 100%; }
   .banner__heading--small {
     position: relative;
@@ -332,6 +339,9 @@ h1, h2, h3, h4, h5, h6 {
       height: 90%;
       width: .3rem;
       background-color: #c38d73; }
+    .banner__heading--small--dark {
+      color: #232428;
+      letter-spacing: .5rem; }
   .banner__video__container {
     position: absolute;
     top: 0%;
