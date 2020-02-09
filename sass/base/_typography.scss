@@ -196,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
         color: $color-text;
     }
 }
-.p, .e, .o, .l {
+.p, .e, .e--light, .o, .o--light, .l {
     position: relative;
     z-index: 2;
 }
@@ -229,20 +229,20 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 0;
         z-index: -1;
     }
-}
 
-#e--light { 
-    &::after {
-    content: 'E';
-    position: absolute;
-    top: 12.5%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 17.5rem;
-    font-weight: 700;
-    color: $color-white;
-    line-height: 0;
-    z-index: -1; 
+    &--light {
+        &::after {
+            content: 'E';
+            position: absolute;
+            top: 12.5%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 17.5rem;
+            font-weight: 700;
+            color: $color-white;
+            line-height: 0;
+            z-index: -1;
+        }   
     }
 }
 
@@ -258,6 +258,21 @@ h1, h2, h3, h4, h5, h6 {
         color: $color-darker;
         line-height: 0;
         z-index: -1;
+    }
+
+    &--light {
+        &::after {
+            content: ' 0';
+            position: absolute;
+            top: 12.5%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 17.5rem;
+            font-weight: 700;
+            color: $color-white;
+            line-height: 0;
+            z-index: -1;
+        }   
     }
 }
 
