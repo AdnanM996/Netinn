@@ -119,3 +119,31 @@
         }
     }
 }
+
+.stuff-to-note {
+    .row {
+        width: 100%;
+        background-color: pink;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        &:not(:last-child) {
+            margin-bottom: $margin-large;
+        }
+    }
+
+    & .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7.5rem;
+
+        &__item {
+
+            &--top {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+        }
+    }
+}

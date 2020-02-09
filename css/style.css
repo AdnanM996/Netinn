@@ -170,6 +170,23 @@ h1, h2, h3, h4, h5, h6 {
 .dark p:not(:last-child) {
   margin-bottom: 5rem; }
 
+.number {
+  display: inline-block;
+  position: relative;
+  font-size: 12.5rem;
+  font-weight: 500;
+  color: #1f2024;
+  margin: 0rem 5rem;
+  z-index: 2; }
+  .number::after {
+    top: 50%;
+    left: -50%;
+    height: 2px;
+    width: 100%;
+    background-color: #c38d73;
+    transform: translateY(-50%);
+    z-index: -1; }
+
 .cta, .cta--empty {
   display: inline-block;
   padding: 2.5rem 5rem;
@@ -333,6 +350,24 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: 2 / 3;
     grid-row: 2 / 3; }
 
+.stuff-to-note .row {
+  width: 100%;
+  background-color: pink;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+  .stuff-to-note .row:not(:last-child) {
+    margin-bottom: 5rem; }
+
+.stuff-to-note .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7.5rem; }
+  .stuff-to-note .grid__item--top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+
 .header {
   width: 100%;
   padding: 5rem 0rem;
@@ -368,6 +403,11 @@ h1, h2, h3, h4, h5, h6 {
 .inside-netinn {
   padding: 10rem 0rem; }
   .inside-netinn .wrapper {
+    flex-direction: column; }
+
+.stuff-to-note {
+  padding: 10rem 0rem; }
+  .stuff-to-note .wrapper {
     flex-direction: column; }
 
 .banner, .banner--light {

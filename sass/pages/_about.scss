@@ -15,3 +15,11 @@
         flex-direction: column;
     }
 }
+
+.stuff-to-note {
+    padding: $padding-medium;
+
+    & .wrapper {
+        flex-direction: column;
+    }
+}
