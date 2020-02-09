@@ -180,6 +180,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 4.8rem;
     font-weight: 500;
     margin-bottom: $margin-small;
+
+    &--dark {
+        color: $color-darker;
+    }
 }
 
 .role {
@@ -224,6 +228,21 @@ h1, h2, h3, h4, h5, h6 {
         color: $color-darker;
         line-height: 0;
         z-index: -1;
+    }
+}
+
+#e--light { 
+    &::after {
+    content: 'E';
+    position: absolute;
+    top: 12.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 17.5rem;
+    font-weight: 700;
+    color: $color-white;
+    line-height: 0;
+    z-index: -1; 
     }
 }
 
