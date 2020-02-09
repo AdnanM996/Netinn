@@ -75,6 +75,55 @@
     }
 }
 
+.crew {
+    & .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        margin: $margin-medium 0rem;
+
+        &:last-child{
+            @include center;
+        }
+    }
+
+    & .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7.5rem;
+        width: 100%;
+
+        &__item {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 85rem;
+            &--dark {
+                background-color: $color-dark;
+            }
+
+            &--light {
+                background-color: $color-grey;
+            }
+
+            &--top {
+                width: 100%;
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+                @include center;
+                flex-direction: column;
+            }
+        }
+
+
+
+    }
+}
+
 .inside-netinn {
     
     & .row {

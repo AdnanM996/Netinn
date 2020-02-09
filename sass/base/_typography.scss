@@ -141,6 +141,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     color: $color-grey-dark;
     line-height: 180%;
+
+    &:not(:last-child) {
+        margin-bottom: $margin-large;
+    }
 }
 
 .text--small {
@@ -167,6 +171,103 @@ h1, h2, h3, h4, h5, h6 {
         width: 100%;
         background-color: $color-orange;
         transform: translateY(-50%);
+        z-index: -1;
+    }
+}
+
+.name {
+    color: $color-white;
+    font-size: 4.8rem;
+    font-weight: 500;
+    margin-bottom: $margin-small;
+}
+
+.role {
+    font-size: 2rem;
+    color: $color-grey-dark;
+    text-transform: capitalize;
+    font-weight: 400;
+
+    &--light {
+        color: $color-text;
+    }
+}
+.p, .e, .o, .l {
+    position: relative;
+    z-index: 2;
+}
+
+.p {
+    &::after {
+        content: 'P';
+        position: absolute;
+        top: 12.5%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 17.5rem;
+        font-weight: 700;
+        color: $color-darker;
+        line-height: 0;
+        z-index: -1;
+    }
+}
+
+.e {
+    &::after {
+        content: 'E';
+        position: absolute;
+        top: 12.5%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 17.5rem;
+        font-weight: 700;
+        color: $color-darker;
+        line-height: 0;
+        z-index: -1;
+    }
+}
+
+.o {
+    &::after {
+        content: 'O';
+        position: absolute;
+        top: 12.5%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 17.5rem;
+        font-weight: 700;
+        color: $color-darker;
+        line-height: 0;
+        z-index: -1;
+    }
+}
+
+.l {
+    &::after {
+        content: 'L';
+        position: absolute;
+        top: 12.5%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 17.5rem;
+        font-weight: 700;
+        color: $color-darker;
+        line-height: 0;
+        z-index: -1;
+    }
+}
+
+.e {
+    &::after {
+        content: 'E';
+        position: absolute;
+        top: 12.5%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 17.5rem;
+        font-weight: 700;
+        color: $color-darker;
+        line-height: 0;
         z-index: -1;
     }
 }

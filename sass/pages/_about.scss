@@ -3,6 +3,12 @@
     width: 100%;
 }*/
 
+.crew {
+    & .wrapper {
+        flex-direction: column;
+    }
+}
+
 .crew,
 .our-studio {
     padding: $padding-medium;
