@@ -4,6 +4,10 @@
     background-color: $color-grey;
     position: relative;
 
+    &--dark {
+        background-color: $color-dark;
+    }
+
     &--light {
         @extend .banner;
         background-color: $color-grey;
