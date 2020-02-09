@@ -136,20 +136,18 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: $margin-large;
 }
 
-.crew,
-.our-studio,
-.dark {
+.big--text {
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: $color-grey-dark;
+    line-height: 180%;
+}
 
-    & p {
-        font-size: 2.8rem;
-        font-weight: 400;
-        color: $color-grey-dark;
-        line-height: 180%;
-    }
-
-    & p:not(:last-child) {
-        margin-bottom: $margin-large;
-    }
+.text--small {
+    font-size: 2rem;
+    color: $color-grey-dark;
+    line-height: 120%;
+    font-weight: 300;
 }
 
 .number {
