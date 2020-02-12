@@ -15,3 +15,11 @@
         user-select: none;
     }
 }
+
+.portfolio {
+    padding: $padding-medium;
+
+    & .wrapper {
+        flex-direction: column;
+    }
+}
