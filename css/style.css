@@ -718,3 +718,17 @@ h1, h2, h3, h4, h5, h6 {
     width: 70%;
     display: inline-block;
     background-color: #c38d73; }
+
+.work {
+  height: 100%;
+  width: 100%; }
+  .work .wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .work--heading {
+    font-size: 15rem;
+    color: #1f2024;
+    text-transform: uppercase;
+    letter-spacing: 1rem; }

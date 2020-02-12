@@ -1,0 +1,17 @@
+.work {
+    height: 100%;
+    width: 100%;
+
+    & .wrapper {
+        height: 100%;
+        @include center;
+    }
+
+    &--heading {
+        font-size: 15rem;
+        color: $color-darker;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        user-select: none;
+    }
+}
