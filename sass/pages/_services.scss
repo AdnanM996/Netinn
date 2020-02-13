@@ -19,5 +19,58 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 3rem;
+
+        &__item {
+            position: relative;
+            overflow: hidden;
+
+            &__link {
+                display: block;
+                position: relative;
+
+                &::after {
+                    top: 0%;
+                    left: 0%;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgba($color-dark, .2);
+                    transition: $transition;
+                    transform: translateX(-100%);
+                }
+
+                &:hover::after {
+                    transform: translateX(0%);
+                }
+
+                & img {
+                    transition: $transition;
+                }
+            }//link
+
+            &--heading {
+                position: absolute;
+                top: 5%;
+                left: 50%;
+                transform: translateX(-50%);
+            }// heading
+
+            &__btn {
+                position: absolute;
+                top: 55%;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                transition: $transition;
+            }
+
+            &:hover .grid__item__btn {
+                top: 50%;
+                opacity: 1;
+            }
+
+            &:hover img {
+                transform: scale(1.03);
+            }
+        }//item
     }
 }

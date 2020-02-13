@@ -816,3 +816,38 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem; }
+    .make-a-differnce .grid__item {
+      position: relative;
+      overflow: hidden; }
+      .make-a-differnce .grid__item__link {
+        display: block;
+        position: relative; }
+        .make-a-differnce .grid__item__link::after {
+          top: 0%;
+          left: 0%;
+          height: 100%;
+          width: 100%;
+          background-color: rgba(35, 36, 40, 0.2);
+          transition: all 0.25s ease-in-out;
+          transform: translateX(-100%); }
+        .make-a-differnce .grid__item__link:hover::after {
+          transform: translateX(0%); }
+        .make-a-differnce .grid__item__link img {
+          transition: all 0.25s ease-in-out; }
+      .make-a-differnce .grid__item--heading {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%); }
+      .make-a-differnce .grid__item__btn {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: all 0.25s ease-in-out; }
+      .make-a-differnce .grid__item:hover .grid__item__btn {
+        top: 50%;
+        opacity: 1; }
+      .make-a-differnce .grid__item:hover img {
+        transform: scale(1.03); }
