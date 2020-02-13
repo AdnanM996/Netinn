@@ -1,0 +1,23 @@
+.make-a-differnce {
+    padding: $padding-medium;
+
+    & .wrapper {
+        flex-direction: column;
+    }
+
+    & .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &:not(:last-child) {
+            margin-bottom: 5rem;
+        }
+    }
+
+    & .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+}
